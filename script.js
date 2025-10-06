@@ -1,3 +1,28 @@
+document.addEventListener('DOMContentLoaded', function() {
+    initializeMobileMenu();
+});
+
+function initializeMobileMenu() {
+    var hamburger = document.querySelector('.hamburger');
+    var navMenu = document.querySelector('.nav-menu');
+    var navLinks = document.querySelectorAll('.nav-link');
+    
+    if (hamburger && navMenu) {
+
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    }
+}
+
 function showGoals() {
     var goalsList = document.getElementById('goals-list');
     
@@ -13,6 +38,7 @@ function showGoals() {
     }
 }
 
+// Show jerseys
 function showJerseys() {
     var jerseysList = document.getElementById('jerseys-list');
     
@@ -28,6 +54,7 @@ function showJerseys() {
     }
 }
 
+// Show tribute form
 function showTribute() {
     var tributeForm = document.getElementById('tribute-form');
     
@@ -41,6 +68,7 @@ function showTribute() {
     }
 }
 
+// Submit tribute
 function submitTribute() {
     var name = document.getElementById('name').value;
     var message = document.getElementById('message').value;

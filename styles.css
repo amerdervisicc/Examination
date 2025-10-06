@@ -14,25 +14,62 @@ header {
     text-align: center;
 }
 
-/* Navigation */
-nav ul {
-    list-style: none;
-    padding: 0;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-brand h1 {
+    font-size: 1.8em;
     margin: 0;
 }
 
-nav li {
-    display: inline-block;
-    margin: 0 10px;
+.subtitle {
+    font-size: 0.9em;
+    opacity: 0.8;
 }
 
-nav a {
+/* Navigation */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 2rem;
+}
+
+.nav-menu li {
+    display: inline-block;
+}
+
+.nav-link {
     color: white;
     text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
 }
 
-nav a:hover {
-    color: yellow;
+.nav-link:hover,
+.nav-link.active {
+    color: #ffd700;
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
 }
 
 /* Hero section */
