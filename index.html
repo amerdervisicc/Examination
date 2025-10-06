@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin de Bruyne - Manchester City Legend</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>Kevin de Bruyne</h1>
+                <span class="subtitle">Manchester City Legend</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Hem</a></li>
+                <li><a href="career.html" class="nav-link">Karriär</a></li>
+                <li><a href="achievements.html" class="nav-link">Prestationer</a></li>
+                <li><a href="gallery.html" class="nav-link">Galleri</a></li>
+                <li><a href="tribute.html" class="nav-link">Hyllning</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Kevin de Bruyne</h2>
+            <p>En legend i Manchester City</p>
+            <img src="Images/kdb-joins.png"Kevin de Bruyne">
+        </section>
+
+        <section class="stats-section">
+            <h2>Statistik</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>356</h3>
+                    <p>Matcher</p>
+                </div>
+                <div class="stat-card">
+                    <h3>102</h3>
+                    <p>Mål</p>
+                </div>
+                <div class="stat-card">
+                    <h3>169</h3>
+                    <p>Assister</p>
+                </div>
+                <div class="stat-card">
+                    <h3>18</h3>
+                    <p>Titlar</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="timeline-section">
+            <h2>Resan genom åren</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2015</div>
+                    <div class="timeline-content">
+                        <h3>Ankomst till Manchester City</h3>
+                        <p>Kevin de Bruyne skrev på för Manchester City från Wolfsburg för en rekordsumma på 55 miljoner pund.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2017-18</div>
+                    <div class="timeline-content">
+                        <h3>Centurions-säsongen</h3>
+                        <p>Hjälpte City att vinna Premier League med 100 poäng och satte nya rekord i engelsk fotboll.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2020-21</div>
+                    <div class="timeline-content">
+                        <h3>Champions League-final</h3>
+                        <p>Ledde City till sin första Champions League-final någonsin.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2024-25</div>
+                    <div class="timeline-content">
+                        <h3>Avskedssäsongen</h3>
+                        <p>Hans sista säsong som Manchester City-spelare efter 10 fantastiska år.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="interactive-section">
+            <h2>Interaktiva funktioner</h2>
+            <div class="interactive-grid">
+                <div class="interactive-card">
+                    <h3>Favoritmål</h3>
+                    <button onclick="showGoals()">Visa favoritmål</button>
+                    <div id="goals-list"></div>
+                </div>
+                <div class="interactive-card">
+                    <h3>Tröjor</h3>
+                    <button onclick="showJerseys()">Visa tröjor</button>
+                    <div id="jerseys-list"></div>
+                </div>
+                <div class="interactive-card">
+                    <h3>Hyllning</h3>
+                    <button onclick="showTribute()">Skriv hyllning</button>
+                    <div id="tribute-form"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="quote-section">
+            <blockquote>
+                "Kevin de Bruyne är en av de bästa spelarna jag någonsin har tränat. Hans teknik, vision och ledarskap är exceptionella."
+                <cite>- Pep Guardiola</cite>
+            </blockquote>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Kevin de Bruyne</h3>
+                <p>Manchester City Legend 2015-2025</p>
+            </div>
+            <div class="footer-section">
+                <h4>Länkar</h4>
+                <ul>
+                    <li><a href="https://www.mancity.com" target="_blank">Manchester City</a></li>
+                    <li><a href="https://www.premierleague.com" target="_blank">Premier League</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Kontakt</h4>
+                <p>En hyllningssida skapad med ❤️</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Kevin de Bruyne Tribute. Alla rättigheter förbehållna.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

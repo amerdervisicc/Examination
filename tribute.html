@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyllning - Kevin de Bruyne</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>Kevin de Bruyne</h1>
+                <span class="subtitle">Manchester City Legend</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Hem</a></li>
+                <li><a href="career.html" class="nav-link">Karriär</a></li>
+                <li><a href="achievements.html" class="nav-link">Prestationer</a></li>
+                <li><a href="gallery.html" class="nav-link">Galleri</a></li>
+                <li><a href="tribute.html" class="nav-link active">Hyllning</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="hero-content">
+                <h1>Hyllning till en Legend</h1>
+                <p>Dela dina minnen och tankar om Kevin de Bruyne</p>
+            </div>
+        </section>
+
+        <section class="tribute-form-section">
+            <h2>Skriv din hyllning</h2>
+            <form class="tribute-form" id="tributeForm">
+                <div class="form-group">
+                    <label for="tributeName">Ditt namn:</label>
+                    <input type="text" id="tributeName" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="tributeEmail">Din e-post (valfritt):</label>
+                    <input type="email" id="tributeEmail" name="email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="tributeMessage">Din hyllning:</label>
+                    <textarea id="tributeMessage" name="message" rows="6" required placeholder="Berätta om dina favoritminnen med Kevin de Bruyne, hans bästa mål, eller vad han betyder för dig som Manchester City-fan..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="favoriteSeason">Favoritsäsong:</label>
+                    <select id="favoriteSeason" name="season">
+                        <option value="">Välj säsong</option>
+                        <option value="2015-16">2015-16</option>
+                        <option value="2016-17">2016-17</option>
+                        <option value="2017-18">2017-18</option>
+                        <option value="2018-19">2018-19</option>
+                        <option value="2019-20">2019-20</option>
+                        <option value="2020-21">2020-21</option>
+                        <option value="2021-22">2021-22</option>
+                        <option value="2022-23">2022-23</option>
+                        <option value="2023-24">2023-24</option>
+                        <option value="2024-25">2024-25</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="submit-btn">Skicka hyllning</button>
+            </form>
+        </section>
+
+        <section class="tributes-display">
+            <h2>Hyllningar från fans</h2>
+            <div class="tributes-grid" id="tributesGrid">
+                <!-- Tributes will be loaded here -->
+            </div>
+        </section>
+
+        <section class="memories-section">
+            <h2>Minnesvärda ögonblick</h2>
+            <div class="memories-grid">
+                <div class="memory-card">
+                    <h3>Första målet</h3>
+                    <p>"Kevin de Bruyne gjorde sitt första mål för Manchester City mot Newcastle United. Det var början på något speciellt."</p>
+                    <span class="memory-date">2015</span>
+                </div>
+
+                <div class="memory-card">
+                    <h3>Centurions-säsongen</h3>
+                    <p>"100 poäng i Premier League. Kevin var central i denna historiska säsong som kommer att minnas för alltid."</p>
+                    <span class="memory-date">2017-18</span>
+                </div>
+
+                <div class="memory-card">
+                    <h3>Champions League-final</h3>
+                    <p>"Efter år av försök nådde City äntligen Champions League-finalen. Kevin ledde laget till denna historiska prestation."</p>
+                    <span class="memory-date">2020-21</span>
+                </div>
+
+                <div class="memory-card">
+                    <h3>Treble-säsongen</h3>
+                    <p>"Premier League, FA Cup och Champions League. Kevin var nyckeln till denna otroliga treble-säsong."</p>
+                    <span class="memory-date">2021-22</span>
+                </div>
+
+                <div class="memory-card">
+                    <h3>100:e assisten</h3>
+                    <p>"Kevin nådde sin 100:e assist för Manchester City. En otrolig prestation som visar hans kreativitet och vision."</p>
+                    <span class="memory-date">2022</span>
+                </div>
+
+                <div class="memory-card">
+                    <h3>Avskedssäsongen</h3>
+                    <p>"Efter 10 fantastiska år säger Kevin adjö till Manchester City. En era som kommer att minnas för alltid."</p>
+                    <span class="memory-date">2024-25</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="quote-section">
+            <blockquote>
+                "Kevin de Bruyne är inte bara en spelare, han är en legend. Hans bidrag till Manchester City kan inte mätas i bara mål och assister, utan i de minnen han har skapat för alla fans."
+                <cite>- Manchester City Supporters Club</cite>
+            </blockquote>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Kevin de Bruyne</h3>
+                <p>Manchester City Legend 2015-2025</p>
+            </div>
+            <div class="footer-section">
+                <h4>Länkar</h4>
+                <ul>
+                    <li><a href="https://www.mancity.com" target="_blank">Manchester City</a></li>
+                    <li><a href="https://www.premierleague.com" target="_blank">Premier League</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Kontakt</h4>
+                <p>En hyllningssida skapad med ❤️</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Kevin de Bruyne Tribute. Alla rättigheter förbehållna.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="tribute.js"></script>
+</body>
+</html>
