@@ -8,15 +8,23 @@
 </head>
 <body>
     <header>
-        <nav>
-            <h1>Kevin de Bruyne</h1>
-            <ul>
-                <li><a href="index.html">Hem</a></li>
-                <li><a href="career.html">Karriär</a></li>
-                <li><a href="achievements.html">Prestationer</a></li>
-                <li><a href="gallery.html">Galleri</a></li>
-                <li><a href="tribute.html">Hyllning</a></li>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>Kevin de Bruyne</h1>
+                <span class="subtitle">Manchester City Legend</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Hem</a></li>
+                <li><a href="career.html" class="nav-link active">Karriär</a></li>
+                <li><a href="achievements.html" class="nav-link">Prestationer</a></li>
+                <li><a href="gallery.html" class="nav-link">Galleri</a></li>
+                <li><a href="tribute.html" class="nav-link">Hyllning</a></li>
             </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
     </header>
 
@@ -89,5 +97,7 @@
     <footer>
         <p>&copy; 2025 Kevin de Bruyne Tribute. Alla rättigheter förbehållna.</p>
     </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
