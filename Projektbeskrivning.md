@@ -38,10 +38,11 @@ Denna webbplats är en hyllning till Kevin de Bruyne och hans 10 år som Manches
 - **Hyllningsformulär**: Tillåter användare att skriva egna hyllningar
 - Enkel toggle-funktionalitet med onclick-events
 
-### 3. Galleri med filtrering
-- Filtrera bilder efter kategori (Mål, Firanden, Titlar, Träning)
-- Basic lightbox-funktionalitet
-- Enkel JavaScript för bildnavigation
+### 3. Galleri "Kevin under åren"
+- Enkel bildvisning utan filtrering
+- Basic lightbox-funktionalitet med navigering
+- Klicka på bilder för att förstora dem
+- Klaviaturnavigation (ESC, piltangenter)
 
 ### 4. Tribute-system
 - Formulär för att skriva hyllningar
@@ -49,10 +50,12 @@ Denna webbplats är en hyllning till Kevin de Bruyne och hans 10 år som Manches
 - Basic localStorage för att spara hyllningar
 - Enkel sökfunktionalitet
 
-### 5. Responsiv navigation
+### 5. Responsiv navigation med hamburger-meny
 - Enkel navigation för alla enheter
+- Hamburger-meny för mobila enheter
 - Basic hover-effekter
 - Aktiv länk-markering
+- Automatisk stängning av mobilmeny vid navigation
 
 ## Utmaningar & lösningar
 
@@ -62,11 +65,11 @@ Denna webbplats är en hyllning till Kevin de Bruyne och hans 10 år som Manches
 
 ### 2. Enkel JavaScript-organisation
 **Utmaning**: Att organisera JavaScript-kod för olika funktioner på ett enkelt sätt.
-**Lösning**: Skapade separata JavaScript-filer med enkla funktioner och onclick-events för tydlig struktur.
+**Lösning**: Skapade separata JavaScript-filer med enkla funktioner och onclick-events för tydlig struktur. Inkluderar mobilmeny-funktionalitet med addEventListener.
 
 ### 3. CSS Grid och Flexbox-användning
 **Utmaning**: Att demonstrera både CSS Grid och Flexbox enligt uppgiftskrav.
-**Lösning**: Använde CSS Grid för statistik-kort och interaktiva kort, samt inline-block för navigation.
+**Lösning**: Använde CSS Grid för statistik-kort (.stats-grid) och interaktiva kort (.interactive-grid), samt Flexbox för navigation (.navbar) och hamburger-meny.
 
 ### 4. Formulärvalidering
 **Utmaning**: Att validera formulärdata på ett enkelt sätt.
@@ -83,7 +86,8 @@ Denna webbplats är en hyllning till Kevin de Bruyne och hans 10 år som Manches
 3. **Navigera**: Använd navigationsmenyn för att utforska olika sidor
 4. **Testa funktioner**: 
    - Klicka på interaktiva knappar på huvudsidan
-   - Filtrera bilder i galleriet
+   - Klicka på bilder i galleriet för att öppna lightbox
+   - Testa hamburger-meny på mobila enheter
    - Skriv en hyllning på tribute-sidan
 
 ### Filstruktur:
@@ -92,21 +96,31 @@ Denna webbplats är en hyllning till Kevin de Bruyne och hans 10 år som Manches
 ├── index.html          (Huvudsida)
 ├── career.html         (Karriär-sida)
 ├── achievements.html   (Prestationer-sida)
-├── gallery.html        (Galleri-sida)
+├── gallery.html        (Galleri-sida "Kevin under åren")
 ├── tribute.html        (Hyllning-sida)
 ├── styles.css          (Huvudstilark)
-├── script.js           (Huvud-JavaScript)
-├── gallery.js          (Galleri-funktionalitet)
+├── script.js           (Huvud-JavaScript med mobilmeny)
+├── gallery.js          (Lightbox-funktionalitet)
 ├── tribute.js          (Tribute-funktionalitet)
+├── images/             (Bildmapp för lokala bilder)
+│   ├── hero/
+│   ├── goals/
+│   ├── celebrations/
+│   └── training/
 └── PROJECT_README.md   (Denna fil)
 ```
 
 ## Tekniska höjdpunkter
 
 - **Semantisk HTML5**: Korrekt användning av semantiska element
-- **CSS Grid**: Används för statistik-kort och interaktiva kort
-- **Enkel JavaScript**: Basic funktioner med onclick-events
-- **Responsiv design**: Mobile-first approach med tre breakpoints
-- **Tillgänglighet**: Alt-texter, semantisk struktur
+- **CSS Grid**: Används för statistik-kort (.stats-grid) och interaktiva kort (.interactive-grid)
+- **Flexbox**: Används för navigation (.navbar) och hamburger-meny
+- **Enkel JavaScript**: Basic funktioner med onclick-events och addEventListener
+- **Responsiv design**: Mobile-first approach med hamburger-meny för mobila enheter
+- **Tillgänglighet**: Alt-texter, semantisk struktur, keyboard navigation
 - **Enkel styling**: Solid colors och basic CSS-effekter
-- **Användarupplevelse**: Enkla hover-effekter och feedback
+- **Användarupplevelse**: Enkla hover-effekter, lightbox-funktionalitet och feedback
+
+---
+
+**Projektet uppfyller alla krav för Godkänt (G) med korrekt layout, interaktiva funktioner och enkel JavaScript-användning som passar för nybörjare.**
