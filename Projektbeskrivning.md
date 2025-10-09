@@ -1,8 +1,8 @@
-# Kevin de Bruyne Tribute Website
+# Kevin de Bruyne hyllningssida
 
 ## Projektbeskrivning
 
-Denna webbplats är en hyllning till Kevin de Bruyne och hans 10 år som Manchester City-spelare (2015-2025). Webbplatsen presenterar hans karriär, prestationer och tillåter besökare att dela sina egna hyllningar. Det är en responsiv tribute-webbplats skriven på ett enkelt sätt som passar för nybörjare.
+Denna webbplats är en hyllning till Kevin de Bruyne och hans 10 år som Manchester City-spelare (2015-2025). Webbplatsen presenterar hans karriär, prestationer och tillåter besökare att dela sina egna hyllningar. Det är en responsiv tribute-webbplats skriven på ett enkelt sätt
 
 ## Tekniker som använts
 
@@ -42,7 +42,6 @@ Denna webbplats är en hyllning till Kevin de Bruyne och hans 10 år som Manches
 - Enkel bildvisning utan filtrering
 - Basic lightbox-funktionalitet med navigering
 - Klicka på bilder för att förstora dem
-- Klaviaturnavigation (ESC, piltangenter)
 
 ### 4. Tribute-system
 - Formulär för att skriva hyllningar
@@ -59,39 +58,28 @@ Denna webbplats är en hyllning till Kevin de Bruyne och hans 10 år som Manches
 
 ## Utmaningar & lösningar
 
-### 1. Responsiv design för olika skärmstorlekar
-**Utmaning**: Att skapa en layout som fungerar bra på mobil, surfplatta och desktop.
-**Lösning**: Använde CSS Grid med `repeat()` och `1fr` för flexibla layouts, kombinerat med media queries för specifika breakpoints.
+# 1. Responsiv design för olika skärmstorlekar
+**Utmaning*: Att skapa en layout som fungerar bra på mobil, surfplatta och desktop.
+**Lösning*: Använde CSS Grid med `repeat()` och `1fr` för flexibla layouts, kombinerat med media queries för specifika breakpoints.
 
-### 2. Enkel JavaScript-organisation
+# 2. Enkel JavaScript-organisation
 **Utmaning**: Att organisera JavaScript-kod för olika funktioner på ett enkelt sätt.
 **Lösning**: Skapade separata JavaScript-filer med enkla funktioner och onclick-events för tydlig struktur. Inkluderar mobilmeny-funktionalitet med addEventListener.
 
-### 3. CSS Grid och Flexbox-användning
+# 3. CSS Grid och Flexbox-användning
 **Utmaning**: Att demonstrera både CSS Grid och Flexbox enligt uppgiftskrav.
 **Lösning**: Använde CSS Grid för statistik-kort (.stats-grid) och interaktiva kort (.interactive-grid), samt Flexbox för navigation (.navbar) och hamburger-meny.
 
-### 4. Formulärvalidering
+# 4. Formulärvalidering
 **Utmaning**: Att validera formulärdata på ett enkelt sätt.
 **Lösning**: Implementerade enkel if/else-validering med alert() för feedback.
 
-### 5. Enkel styling
+# 5. Enkel styling
 **Utmaning**: Att skapa en attraktiv webbplats med enkel kod.
 **Lösning**: Använde solid colors, basic styling och enkla hover-effekter istället för avancerade CSS-effekter.
 
-## Instruktioner: hur man öppnar/kör projektet
+# Filstruktur:
 
-1. **Ladda ner projektet**: Klona eller ladda ner alla filer till en mapp
-2. **Öppna webbplatsen**: Dubbelklicka på `index.html` eller öppna den i din webbläsare
-3. **Navigera**: Använd navigationsmenyn för att utforska olika sidor
-4. **Testa funktioner**: 
-   - Klicka på interaktiva knappar på huvudsidan
-   - Klicka på bilder i galleriet för att öppna lightbox
-   - Testa hamburger-meny på mobila enheter
-   - Skriv en hyllning på tribute-sidan
-
-### Filstruktur:
-```
 /
 ├── index.html          (Huvudsida)
 ├── career.html         (Karriär-sida)
@@ -103,14 +91,9 @@ Denna webbplats är en hyllning till Kevin de Bruyne och hans 10 år som Manches
 ├── gallery.js          (Lightbox-funktionalitet)
 ├── tribute.js          (Tribute-funktionalitet)
 ├── images/             (Bildmapp för lokala bilder)
-│   ├── hero/
-│   ├── goals/
-│   ├── celebrations/
-│   └── training/
 └── PROJECT_README.md   (Denna fil)
-```
 
-## Tekniska höjdpunkter
+# Tekniska höjdpunkter
 
 - **Semantisk HTML5**: Korrekt användning av semantiska element
 - **CSS Grid**: Används för statistik-kort (.stats-grid) och interaktiva kort (.interactive-grid)
@@ -122,5 +105,3 @@ Denna webbplats är en hyllning till Kevin de Bruyne och hans 10 år som Manches
 - **Användarupplevelse**: Enkla hover-effekter, lightbox-funktionalitet och feedback
 
 ---
-
-**Projektet uppfyller alla krav för Godkänt (G) med korrekt layout, interaktiva funktioner och enkel JavaScript-användning som passar för nybörjare.**

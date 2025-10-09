@@ -38,7 +38,6 @@ function showGoals() {
     }
 }
 
-// Show jerseys
 function showJerseys() {
     var jerseysList = document.getElementById('jerseys-list');
     
@@ -54,7 +53,6 @@ function showJerseys() {
     }
 }
 
-// Show tribute form
 function showTribute() {
     var tributeForm = document.getElementById('tribute-form');
     
@@ -68,7 +66,6 @@ function showTribute() {
     }
 }
 
-// Submit tribute
 function submitTribute() {
     var name = document.getElementById('name').value;
     var message = document.getElementById('message').value;
