@@ -2,7 +2,7 @@
 
 ## Projektbeskrivning
 
-Denna webbplats är en hyllning till Kevin de Bruyne och hans 10 år som Manchester City-spelare (2015-2025). Webbplatsen presenterar hans karriär, prestationer och tillåter besökare att dela sina egna hyllningar. Det är en responsiv tribute-webbplats skriven på ett enkelt sätt
+Denna webbplats är en hyllning till Kevin de Bruyne och hans 10 år som Manchester City-spelare (2015-2025). Webbplatsen presenterar hans karriär, prestationer och tillåter besökare att dela sina egna hyllningar. Det är en responsiv tribute-webbplats skriven på ett enkelt sätt med HTML, CSS och JavaScript
 
 ## Tekniker som använts
 
