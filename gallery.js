@@ -40,12 +40,12 @@ function initializeGallery() {
         }
         
         lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        document.body.style.overflow = 'hidden'; 
     };
 
     const closeLightbox = () => {
         lightbox.classList.remove('active');
-        document.body.style.overflow = ''; // Restore scrolling
+        document.body.style.overflow = ''; 
     };
     
     const showPrevious = () => {

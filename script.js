@@ -68,9 +68,9 @@ function showTribute() {
     
     if (tributeForm.innerHTML === '') {
         tributeForm.innerHTML = '<h4>Skriv din hyllning:</h4>' +
-            '<input type="text" id="name" placeholder="Ditt namn"><br><br>' +
-            '<textarea id="message" placeholder="Din hyllning..." rows="4" cols="40"></textarea><br><br>' +
-            '<button onclick="submitTribute()">Skicka hyllning</button>';
+            '<input type="text" id="name" placeholder="Ditt namn" class="tribute-input">' +
+            '<textarea id="message" placeholder="Din hyllning..." rows="4" class="tribute-textarea"></textarea>' +
+            '<button onclick="submitTribute()" class="tribute-submit-btn">Skicka hyllning</button>';
     } else {
         tributeForm.innerHTML = '';
     }

@@ -1,3 +1,7 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -192,6 +196,45 @@ header {
 
 .interactive-card button:hover {
     background-color: #2a5298;
+}
+
+#tribute-form {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.tribute-input,
+.tribute-textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+}
+
+.tribute-textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.tribute-submit-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.tribute-submit-btn:hover {
+    background-color: #218838;
 }
 
 .career-section {
@@ -425,8 +468,9 @@ footer {
     padding: 2rem;
     border-radius: 15px;
     border: 2px solid #e9ecef;
-    box-sizing: border-box;
     text-align: left;
+    width: 100%;
+    overflow: hidden;
 }
 
 .tribute-form input,
@@ -438,8 +482,7 @@ footer {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-family: inherit;
-    box-sizing: border-box;
-    max-width: 100%;
+    font-size: 1rem;
 }
 
 .tribute-form button {
@@ -1238,9 +1281,16 @@ footer {
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    
+    .tribute-form-section {
+        padding: 3rem 2rem;
+    }
+    
+    .tribute-form {
+        max-width: 500px;
+    }
 }
 
-/* Mobile styles */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -1332,6 +1382,13 @@ footer {
         grid-template-columns: 1fr;
     }
     
+    .tribute-input,
+    .tribute-textarea {
+        width: 100%;
+        max-width: 100%;
+        font-size: 0.8rem;
+    }
+    
     .achievements-grid {
         grid-template-columns: 1fr;
     }
@@ -1376,8 +1433,21 @@ footer {
         font-size: 1.2rem;
     }
     
+    .tribute-form-section {
+        padding: 2rem 1rem;
+    }
+    
     .tribute-form {
-        margin: 0 1rem;
+        margin: 0;
         padding: 1.5rem;
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .tribute-form input,
+    .tribute-form textarea,
+    .tribute-form select {
+        width: 100%;
+        max-width: 100%;
     }
 }

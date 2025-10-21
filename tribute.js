@@ -163,7 +163,6 @@ const initializeTribute = () => {
             const searchTerm = e.target.value.toLowerCase();
             const tributeCards = document.querySelectorAll('.tribute-card');
             
-            // Use filter HOF to filter tribute cards
             tributeCards.forEach(card => {
                 const name = card.querySelector('h3').textContent.toLowerCase();
                 const message = card.querySelector('p').textContent.toLowerCase();
