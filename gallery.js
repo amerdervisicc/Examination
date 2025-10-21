@@ -1,54 +1,74 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     initializeGallery();
 });
 
 function initializeGallery() {
-    var galleryItems = document.querySelectorAll('.gallery-item');
-    var lightbox = document.getElementById('lightbox');
-    var lightboxImg = document.getElementById('lightbox-img');
-    var closeBtn = document.getElementById('close-lightbox');
-    var prevBtn = document.getElementById('prev-btn');
-    var nextBtn = document.getElementById('next-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.getElementById('close-lightbox');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
     
-    var currentImageIndex = 0;
-    var images = [];
+    let currentImageIndex = 0;
+    const images = [];
     
-    galleryItems.forEach(function(item, index) {
-        var img = item.querySelector('.gallery-img');
+    galleryItems.forEach((item, index) => {
+        const img = item.querySelector('.gallery-img');
         if (img) {
             images.push({
                 src: img.src,
-                alt: img.alt
+                alt: img.alt,
+                caption: item.querySelector('.gallery-overlay h3')?.textContent || ''
             });
             
-            img.addEventListener('click', function() {
+            img.addEventListener('click', () => {
                 openLightbox(index);
             });
         }
     });
     
-    function openLightbox(index) {
+    const openLightbox = (index) => {
         currentImageIndex = index;
         lightboxImg.src = images[index].src;
         lightboxImg.alt = images[index].alt;
-        lightbox.style.display = 'flex';
-    }
+        
+        // Update caption
+        const caption = lightbox.querySelector('.lightbox-caption h3');
+        if (caption) {
+            caption.textContent = images[index].caption;
+        }
+        
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    };
 
-    function closeLightbox() {
-        lightbox.style.display = 'none';
-    }
+    const closeLightbox = () => {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+    };
     
-    function showPrevious() {
+    const showPrevious = () => {
         currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
         lightboxImg.src = images[currentImageIndex].src;
         lightboxImg.alt = images[currentImageIndex].alt;
-    }
+        
+        const caption = lightbox.querySelector('.lightbox-caption h3');
+        if (caption) {
+            caption.textContent = images[currentImageIndex].caption;
+        }
+    };
     
-    function showNext() {
+    const showNext = () => {
         currentImageIndex = (currentImageIndex + 1) % images.length;
         lightboxImg.src = images[currentImageIndex].src;
         lightboxImg.alt = images[currentImageIndex].alt;
-    }
+        
+        const caption = lightbox.querySelector('.lightbox-caption h3');
+        if (caption) {
+            caption.textContent = images[currentImageIndex].caption;
+        }
+    };
     
     if (closeBtn) {
         closeBtn.addEventListener('click', closeLightbox);
@@ -63,15 +83,15 @@ function initializeGallery() {
     }
 
     if (lightbox) {
-        lightbox.addEventListener('click', function(e) {
+        lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) {
                 closeLightbox();
             }
         });
     }
     
-    document.addEventListener('keydown', function(e) {
-        if (lightbox.style.display === 'flex') {
+    document.addEventListener('keydown', (e) => {
+        if (lightbox.classList.contains('active')) {
             if (e.key === 'Escape') {
                 closeLightbox();
             } else if (e.key === 'ArrowLeft') {

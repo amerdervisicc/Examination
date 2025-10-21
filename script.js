@@ -1,21 +1,31 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     initializeMobileMenu();
+    updateFooterYear();
 });
 
+const getCurrentYear = () => new Date().getFullYear();
+
+const updateFooterYear = () => {
+    const footerYear = document.querySelector('.footer-bottom p');
+    if (footerYear) {
+        footerYear.textContent = footerYear.textContent.replace('2024', getCurrentYear());
+    }
+};
+
 function initializeMobileMenu() {
-    var hamburger = document.querySelector('.hamburger');
-    var navMenu = document.querySelector('.nav-menu');
-    var navLinks = document.querySelectorAll('.nav-link');
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
     
     if (hamburger && navMenu) {
 
-        hamburger.addEventListener('click', function() {
+        hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
         
-        navLinks.forEach(function(link) {
-            link.addEventListener('click', function() {
+        navLinks.forEach((link) => {
+            link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
             });
@@ -24,7 +34,7 @@ function initializeMobileMenu() {
 }
 
 function showGoals() {
-    var goalsList = document.getElementById('goals-list');
+    const goalsList = document.getElementById('goals-list');
     
     if (goalsList.innerHTML === '') {
         goalsList.innerHTML = '<h4>Kevins favoritmål:</h4>' +
@@ -39,7 +49,7 @@ function showGoals() {
 }
 
 function showJerseys() {
-    var jerseysList = document.getElementById('jerseys-list');
+    const jerseysList = document.getElementById('jerseys-list');
     
     if (jerseysList.innerHTML === '') {
         jerseysList.innerHTML = '<h4>Tröja-samling:</h4>' +
@@ -54,7 +64,7 @@ function showJerseys() {
 }
 
 function showTribute() {
-    var tributeForm = document.getElementById('tribute-form');
+    const tributeForm = document.getElementById('tribute-form');
     
     if (tributeForm.innerHTML === '') {
         tributeForm.innerHTML = '<h4>Skriv din hyllning:</h4>' +
@@ -67,15 +77,15 @@ function showTribute() {
 }
 
 function submitTribute() {
-    var name = document.getElementById('name').value;
-    var message = document.getElementById('message').value;
+    const name = document.getElementById('name').value;
+    const message = document.getElementById('message').value;
     
     if (name === '' || message === '') {
         alert('Vänligen fyll i både namn och meddelande!');
         return;
     }
     
-    var tributeForm = document.getElementById('tribute-form');
+    const tributeForm = document.getElementById('tribute-form');
     tributeForm.innerHTML = '<h4>Tack för din hyllning, ' + name + '!</h4>' +
         '<p>"' + message + '"</p>' +
         '<p><em>Din hyllning har sparats!</em></p>';
